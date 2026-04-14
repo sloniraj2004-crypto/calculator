@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    min-height: 50vh;
+    background: linear-gradient(135deg, #141e30, #243b55, #4b6cb7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.Calculator {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 28px 22px;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.Calculator h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 18px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.Calculator form input {
+    border: 0;
+    outline: 0;
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+    background: rgba(255, 255, 255, 0.10);
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 8px;
+    transition: all 0.25s ease;
+}
+
+.Calculator form input:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.Calculator form input:active {
+    transform: scale(0.96);
+}
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0 20px 0;
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 42px;
+    height: 85px;
+    padding: 15px 20px;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.22);
+    border-radius: 18px;
+    color: #ffffff;
+}
+
+form input.equal {
+    width: 148px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-weight: 600;
+}
+
+form input.equal:hover {
+    background: linear-gradient(135deg, #1dd3ff, #1a84ff);
+}
+
+form input.operator {
+    color: #7ef9ff;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .Calculator {
+        padding: 20px 14px;
+        border-radius: 18px;
+    }
+
+    .Calculator h2 {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+
+    .Calculator form input {
+        width: 58px;
+        height: 58px;
+        margin: 6px;
+        font-size: 18px;
+    }
+
+    form .display input {
+        font-size: 32px;
+        height: 72px;
+        padding: 12px 15px;
+    }
+
+    form input.equal {
+        width: 134px;
+    }
+}
+
+@media (max-width: 360px) {
+    .Calculator form input {
+        width: 52px;
+        height: 52px;
+        margin: 5px;
+        font-size: 17px;
+    }
+
+    form input.equal {
+        width: 120px;
+    }
+
+    form .display input {
+        font-size: 28px;
+    }
+}
